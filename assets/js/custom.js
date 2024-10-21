@@ -252,7 +252,7 @@
   var headerId = $(".sticky-header-section , .scrolltop-fixed-header-section");
   $(window).on("scroll", function () {
     var amountScrolled = $(window).scrollTop();
-    if ($(this).scrollTop() > 250) {
+    if ($(this).scrollTop() > 100) {
       headerId.removeClass("not-stuck");
       headerId.addClass("stuck");
     } else {

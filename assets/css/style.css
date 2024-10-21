@@ -744,7 +744,6 @@ textarea:focus {
 }
 
 .overlay-black {
-  min-height: 100vh;
   background: rgba(51, 51, 51, 0.5);
 }
 
@@ -2879,7 +2878,7 @@ button {
 }
 
 .breadcrumb-section .breadcrumb-title {
-  padding: 0px 70px;
+  padding: 150px 70px 0 70px;
 }
 
 .breadcrumb-section .breadcrumb-title .sub-title {
@@ -3183,7 +3182,6 @@ button {
 /* index - 1 main-carousel1 - start
 ==================================================================================================== */
 .slide-section .main-carousel1 .item {
-  min-height: 100vh;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
