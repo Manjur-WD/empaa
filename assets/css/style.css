@@ -779,10 +779,7 @@ button {
 
 .default-header-section .header-top {
   padding: 5px 0px;
-  background: -webkit-gradient(linear, left top, right bottom, from(#ee3930), to(#fade1c));
-  background: -webkit-linear-gradient(top left, #ee3930, #fade1c);
-  background: -o-linear-gradient(top left, #ee3930, #fade1c);
-  background: linear-gradient(to bottom right, #ee3930, #fade1c);
+  background-color: #000000;
 }
 
 .default-header-section .header-top .basic-contact ul {
@@ -1151,17 +1148,13 @@ button {
   z-index: -1;
   border-radius: 3px;
   position: absolute;
-  background: -webkit-gradient(linear, left top, right bottom, from(#ef3936), to(#fbdf12));
-  background: -webkit-linear-gradient(top left, #ef3936, #fbdf12);
-  background: -o-linear-gradient(top left, #ef3936, #fbdf12);
-  background: linear-gradient(to bottom right, #ef3936, #fbdf12);
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .sticky-header-section .header-bottom .menu-item-list>ul>li:hover a {
-  color: #ffffff;
+  color: #ffbe30;
 }
 
 .sticky-header-section .header-bottom .menu-item-list>ul>li:hover a:before {
@@ -1169,7 +1162,7 @@ button {
 }
 
 .sticky-header-section .header-bottom .menu-item-list>ul>.active a {
-  color: #ffffff;
+  color: #ffbe30;
 }
 
 .sticky-header-section .header-bottom .menu-item-list>ul>.active a:before {
