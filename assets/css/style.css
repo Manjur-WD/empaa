@@ -4,6 +4,11 @@
 
 /* fonts load - start
 ==================================================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+
 body,
 p {
   font-family: "Afacad Flux", sans-serif;
@@ -236,6 +241,12 @@ textarea:focus {
 
 /* customization of unorder list - start 
 ================================================== */
+
+#marketplace {
+  scroll-margin-top: 146px;
+}
+
+
 .ul-li ul,
 .ul-li-block ul {
   margin: 0px;
@@ -3196,14 +3207,14 @@ button {
 }
 
 .slide-section .main-carousel1 .item .slider-item-content .medium-text {
-  font-size: clamp(25px,5vw,60px);
+  font-size: clamp(25px, 5vw, 60px);
   font-weight: 400;
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .slide-section .main-carousel1 .item .slider-item-content .big-text {
-  font-size: clamp(40px,3vw,72px);
+  font-size: clamp(40px, 3vw, 72px);
   font-weight: 900;
   color: #ffffff;
 }
@@ -11267,11 +11278,12 @@ button {
 
 /* NEWLY ADDED */
 
-#clients-testimonial-carousel p{
+#clients-testimonial-carousel p {
   color: white;
 }
 
-.step-1, .step-2 {
+.step-1,
+.step-2 {
   transition: transform 0.5s ease-in-out;
 }
 
