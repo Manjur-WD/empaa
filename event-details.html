@@ -31,10 +31,6 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.min.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/calendar.css">
 
-		<!-- color switcher css include -->
-		<link rel="stylesheet" type="text/css" href="assets/css/colors/style-switcher.css">
-		<link id="color_theme" rel="stylesheet" type="text/css" href="assets/css/colors/default.css">
-
 		<!-- custom css include -->
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		
@@ -42,7 +38,7 @@
 	</head>
 
 
-	<body class="default-header-p">
+	<body>
 
 
 
@@ -56,23 +52,21 @@
 			</a>
 		</div>
 		<!-- backtotop - end -->
+	<!-- preloader - start -->
+	<div id="preloader">
+		<img src="./assets/images/preloader.gif" alt="loader" width="80">
+		<img src="./assets/images/1.site-logo.png" alt="logo" width="200">
+	</div>
+	<!-- preloader - end -->
 
-		<!-- preloader - start -->
-		<div id="preloader"></div>
-		<!-- preloader - end -->
-
-
-
-
-		<!-- header-section - start
+<!-- header-section - start
 		================================================== -->
-		<header id="header-section" class="header-section default-header-section auto-hide-header clearfix">
-
+		<header id="header-section" class="header-section default-header-section sticky-header-section not-stuck clearfix">
 			<!-- header-top - start -->
 			<div class="header-top">
 				<div class="container">
 					<div class="row">
-
+	
 						<!-- basic-contact - start -->
 						<div class="col-lg-6">
 							<div class="basic-contact">
@@ -93,7 +87,7 @@
 							</div>
 						</div>
 						<!-- basic-contact - end -->
-
+	
 						<!-- register-login-group - start -->
 						<div class="col-lg-6">
 							<div class="register-login-group">
@@ -101,77 +95,176 @@
 									<li>
 										<a href="#register-modal" class="register-modal-btn">
 											<i class="fas fa-user"></i>
-											Register
+											Become a member
 										</a>
-										<div id="register-modal" class="reglog-modal-wrapper register-modal mfp-hide clearfix" style="background-image: url(assets/images/login-modal-bg.jpg);">
-											<div class="overlay-black clearfix">
-
-												<!-- leftside-content - start -->
-												<div class="leftside-content">
-													<div class="site-logo-wrapper mb-80">
-														<a href="#!" class="logo">
-															<img src="assets/images/2.site-logo.png" alt="logo_not_found">
-														</a>
+										<div id="register-modal"
+											class="reglog-modal-wrapper register-modal mfp-hide clearfix"
+											style="background-image: url(assets/images/login-modal-bg.jpg);">
+	
+											<div class="overlay-black clearfix form-content">
+	
+	
+	
+												<div class="step-1">
+													<!-- leftside-content - start -->
+													<div class="leftside-content">
+														<div class="site-logo-wrapper mb-80">
+															<a href="index.html" class="logo">
+																<img src="assets/images/2.site-logo.png"
+																	alt="logo_not_found">
+															</a>
+														</div>
+														<div class="register-login-link mb-80">
+															<ul>
+																<li><a href="#!">Login</a></li>
+																<li class="active"><a href="#!">Register</a></li>
+															</ul>
+														</div>
 													</div>
-													<div class="register-login-link mb-80">
-														<ul>
-															<li><a href="#!">Login</a></li>
-															<li class="active"><a href="#!">Register</a></li>
-														</ul>
+													<!-- leftside-content - end -->
+	
+													<!-- rightside-content - start -->
+													<div class="rightside-content text-center">
+														<div class="mb-30">
+															<h2 class="form-title title-large white-color">Membership
+																<strong>Registration</strong>
+															</h2>
+															<span class="form-subtitle white-color">Have an account?
+																<strong>LOGIN NOW</strong></span>
+														</div>
+	
+														<div class="login-form text-center mb-50">
+															<form action="#!">
+																<div class="form-item">
+																	<input type="email" placeholder="User Name">
+																</div>
+																<div class="form-item">
+																	<input type="password" placeholder="Password">
+																</div>
+																<div class="form-item">
+																	<input type="email" placeholder="Repeat Password">
+																</div>
+																<div class="form-item">
+																	<input type="email" placeholder="Email Address">
+																</div>
+																<div class="form-item">
+																	<input type="phone" placeholder="Phone Number">
+																</div>
+																<div class="human-verification text-left">
+																	<input type="checkbox" id="imnotarobot">
+																	<label for="imnotarobot">I'm not a robot</label>
+																	<span class="verification-image">
+																		<img src="assets/images/iamnotrobot.png"
+																			alt="Image_not_found">
+																	</span>
+																</div>
+																<button type="button" class="login-btn"
+																	id="check-plan-btn">Register as a member</button>
+															</form>
+														</div>
+	
 													</div>
-													<div class="copyright-text">
-														<p class="m-0">©2018 <a href="#!" class="yellow-color">empaa.com</a> all right reserved, made with <i class="fas fa-heart"></i> by jThemes Studio </p>
-													</div>
+													<!-- rightside-content - end -->
 												</div>
-												<!-- leftside-content - end -->
-
-												<!-- rightside-content - start -->
-												<div class="rightside-content text-center">
-
-													<div class="mb-30">
-														<h2 class="form-title title-large white-color">Account <strong>Register</strong></h2>
-														<span class="form-subtitle white-color">Have an account? <strong>LOGIN NOW</strong></span>
+	
+	
+	
+												<div class="step-2" style="display:none;">
+													<!-- event-pricing-plan - start -->
+													<div class="event-details-section">
+														<div class="event-pricing-plan mb-80 clearfix">
+	
+															<div class="section-title text-left mb-50">
+																<button class="bg-secondary px-3 py-2 text-white"
+																	id="back-to-step1-btn">Back</button>
+															</div>
+	
+															<div class="pricing-list ul-li clearfix">
+																<ul>
+	
+																	<li class="pricing-table">
+																		<div class="pricing-header clearfix">
+																			<span class="amount">$19</span>
+																			<h3 class="pricing-table-title">standard</h3>
+																		</div>
+	
+																		<div class="pricing-body clearfix">
+																			<ul>
+																				<li class="item-off">1-4 Person</li>
+																				<li class="item-off">2 Outfits</li>
+																				<li class="item-off">45 Minutes</li>
+																				<li class="item-on">10 Digital images</li>
+																				<li class="item-on">Print Release</li>
+																				<li class="item-on">Custom Album</li>
+																			</ul>
+																		</div>
+	
+																		<div class="pricing-footer clearfix">
+																			<a href="#!" class="custom-btn">get this</a>
+																		</div>
+																	</li>
+	
+																	<li class="pricing-table popular-pricing-table">
+																		<span class="popularity-sign">best choice</span>
+																		<div class="pricing-header clearfix">
+																			<span class="amount">$59</span>
+																			<h3 class="pricing-table-title">professional
+																			</h3>
+																		</div>
+	
+																		<div class="pricing-body clearfix">
+																			<ul>
+	
+																				<li class="item-off">1-4 Person</li>
+																				<li class="item-off">2 Outfits</li>
+																				<li class="item-off">45 Minutes</li>
+																				<li class="item-on">10 Digital images</li>
+																				<li class="item-on">Print Release</li>
+																				<li class="item-on">Custom Album</li>
+	
+																			</ul>
+																		</div>
+	
+																		<div class="pricing-footer clearfix">
+																			<a href="#!" class="custom-btn">get this</a>
+																		</div>
+																	</li>
+	
+																	<li class="pricing-table">
+																		<div class="pricing-header clearfix">
+																			<span class="amount">$99</span>
+																			<h3 class="pricing-table-title">enterprise</h3>
+																		</div>
+	
+																		<div class="pricing-body clearfix">
+																			<ul>
+	
+																				<li class="item-off">1-4 Person</li>
+																				<li class="item-off">2 Outfits</li>
+																				<li class="item-off">45 Minutes</li>
+																				<li class="item-on">10 Digital images</li>
+																				<li class="item-on">Print Release</li>
+																				<li class="item-on">Custom Album</li>
+	
+																			</ul>
+																		</div>
+	
+																		<div class="pricing-footer clearfix">
+																			<a href="#!" class="custom-btn">get this</a>
+																		</div>
+																	</li>
+																</ul>
+															</div>
+	
+														</div>
 													</div>
-
-													<div class="login-form text-center mb-50">
-														<form action="#!">
-															<div class="form-item">
-																<input type="email" placeholder="User Name">
-															</div>
-															<div class="form-item">
-																<input type="password" placeholder="Password">
-															</div>
-															<div class="form-item">
-																<input type="email" placeholder="Repeat Password">
-															</div>
-															<div class="form-item">
-																<input type="password" placeholder="Email Address">
-															</div>
-															<div class="human-verification text-left">
-																<input type="checkbox" id="imnotarobot">
-																<label for="imnotarobot">I'm not a robot</label>
-																<span class="verification-image">
-																	<img src="assets/images/iamnotrobot.png" alt="Image_not_found">
-																</span>
-															</div>
-															<button type="submit" class="login-btn">login now</button>
-														</form>
-													</div>
-
-													<div class="bottom-text white-color">
-														<p class="m-0">
-															* Denotes mandatory field.
-														</p>
-														<p class="m-0">** At least one telephone number is required.</p>
-													</div>
-
+													<!-- event-pricing-plan - end -->
 												</div>
-												<!-- rightside-content - end -->
-
+	
 												<a class="popup-modal-dismiss" href="#!">
 													<i class="fas fa-times"></i>
 												</a>
-
+	
 											</div>
 										</div>
 									</li>
@@ -180,9 +273,10 @@
 											<i class="fas fa-lock"></i>
 											Login
 										</a>
-										<div id="login-modal" class="reglog-modal-wrapper mfp-hide clearfix" style="background-image: url(assets/images/login-modal-bg.jpg);">
+										<div id="login-modal" class="reglog-modal-wrapper mfp-hide clearfix"
+											style="background-image: url(assets/images/login-modal-bg.jpg);">
 											<div class="overlay-black clearfix">
-
+	
 												<!-- leftside-content - start -->
 												<div class="leftside-content">
 													<div class="site-logo-wrapper mb-80">
@@ -197,36 +291,33 @@
 														</ul>
 													</div>
 													<div class="copyright-text">
-														<p class="m-0">©2018 <a href="#!" class="yellow-color">empaa.com</a> all right reserved, made with <i class="fas fa-heart"></i> by jThemes Studio </p>
+														<p class="m-0">©2024 <a href="index.html"
+																class="yellow-color">empaa.com</a>
+															all right reserved</p>
 													</div>
 												</div>
 												<!-- leftside-content - end -->
-
+	
 												<!-- rightside-content - start -->
 												<div class="rightside-content text-center">
-
+	
 													<div class="mb-30">
-														<h2 class="form-title title-large white-color">Account <strong>Login</strong></h2>
-														<span class="form-subtitle white-color">Login to our website, or <strong>REGISTER</strong></span>
+														<h2 class="form-title title-large white-color">Members
+															<strong>Login</strong>
+														</h2>
+														<span class="form-subtitle white-color">Login if you are a
+															registered member</span>
+	
 													</div>
-
-													<div class="fb-login-btn mb-30">
-														<a href="#!">
-															<span class="icon">
-																<i class="fab fa-facebook-f"></i>
-															</span>
-															login with facebook
-														</a>
-													</div>
-
-													<div class="or-text mb-30">
-														<span>or sign in</span>
-													</div>
-
+	
+	
+	
+	
+	
 													<div class="login-form text-center mb-50">
 														<form action="#!">
 															<div class="form-item">
-																<input type="email" placeholder="example@gmail.com">
+																<input type="email" placeholder="Username">
 															</div>
 															<div class="form-item">
 																<input type="password" placeholder="Password">
@@ -234,21 +325,14 @@
 															<button type="submit" class="login-btn">login now</button>
 														</form>
 													</div>
-
-													<div class="bottom-text white-color">
-														<p class="m-0">
-															* Denotes mandatory field.
-														</p>
-														<p class="m-0">** At least one telephone number is required.</p>
-													</div>
-
+	
 												</div>
 												<!-- rightside-content - end -->
-
+	
 												<a class="popup-modal-dismiss" href="#!">
 													<i class="fas fa-times"></i>
 												</a>
-
+	
 											</div>
 										</div>
 									</li>
@@ -256,151 +340,163 @@
 							</div>
 						</div>
 						<!-- register-login-group - end -->
-						
+	
 					</div>
 				</div>
 			</div>
 			<!-- header-top - end -->
-
 			<!-- header-bottom - start -->
 			<div class="header-bottom">
 				<div class="container">
-					<div class="row">
-
+					<div class="row align-items-center">
 						<!-- site-logo-wrapper - start -->
 						<div class="col-lg-3">
 							<div class="site-logo-wrapper">
-								<a href="index-1.html" class="logo">
-									<img src="assets/images/0.site-logo.png" alt="logo_not_found">
+								<a href="index.html" class="logo">
+									<img src="assets/images/1.site-logo.png" alt="logo_not_found">
 								</a>
 							</div>
 						</div>
 						<!-- site-logo-wrapper - end -->
-
+	
 						<!-- mainmenu-wrapper - start -->
 						<div class="col-lg-9">
 							<div class="mainmenu-wrapper">
 								<div class="row">
-
 									<!-- menu-item-list - start -->
 									<div class="col-lg-10">
 										<div class="menu-item-list ul-li clearfix">
 											<ul>
-												<li class="menu-item-has-children">
-													<a href="#!">home</a>
-													<ul class="sub-menu">
-														<li class="menu-item-has-children">
-															<a href='index-1.html'>home v.1</a>
-															<ul class="sub-menu">
-																<li>
-																	<a href='#'>example v.1.1</a>
-																</li>
-																<li>
-																	<a href='#'>example v.1.2</a>
-																</li>
-																<li>
-																	<a href='#'>example v.1.3</a>
-																</li>
-																<li>
-																	<a href='#'>example v.1.4</a>
-																</li>
-															</ul>
-														</li>
-														<li class="menu-item-has-children">
-															<a href='index-2.html'>home v.2</a>
-															<ul class="sub-menu">
-																<li>
-																	<a href='#'>example v.2.1</a>
-																</li>
-																<li>
-																	<a href='#'>example v.2.2</a>
-																</li>
-																<li>
-																	<a href='#'>example v.2.3</a>
-																</li>
-															</ul>
-														</li>
-														<li class="menu-item-has-children">
-															<a href='index-3.html'>home v.3</a>
-															<ul class="sub-menu">
-																<li>
-																	<a href='#'>example v.3.1</a>
-																</li>
-																<li>
-																	<a href='#'>example v.3.2</a>
-																</li>
-															</ul>
-														</li>
-														<li class="menu-item-has-children">
-															<a href='index-4.html'>home v.4</a>
-															<ul class="sub-menu">
-																<li>
-																	<a href='#'>example v.4.1</a>
-																</li>
-															</ul>
-														</li>
-													</ul>
+												<li class="menu-item-has-children active">
+													<a href="index.html">home</a>
 												</li>
 												<li class="menu-item-has-children">
-													<a href="#!">about</a>
+													<a href="about.html">about</a>
 													<ul class="sub-menu">
 														<li><a href="about.html">about us</a></li>
 														<li><a href='service.html'>service</a></li>
 														<li><a href='faq.html'>FAQ</a></li>
 													</ul>
 												</li>
-												<li class="menu-item-has-children active">
-													<a href="#!">events</a>
+												<li class="menu-item-has-children">
+													<a href="event.html">events</a>
+												</li>
+												<li>
+													<a href="#">marketplace</a>
+												</li>
+												<li class="menu-item-has-children">
+													<a href="#!">learning</a>
 													<ul class="sub-menu">
-														<li class="menu-item-has-children">
-															<a href='event-1.html'>event List</a>
-															<ul class="sub-menu">
-																<li><a href="event-1-without-sidebar.html">list without sidebar</a></li>
-															</ul>
-														</li>
-														<li class="menu-item-has-children">
-															<a href='event-2.html'>event Grid</a>
-															<ul class="sub-menu">
-																<li><a href="event-2-without-sidebar.html">grid without sidebar</a></li>
-															</ul>
-														</li>
-														<li><a href='event-details.html' class="active">event details</a></li>
-														<li><a href='booking.html'>event booking</a></li>
+														<li><a href='#'>institues</a></li>
+														<li><a href='#'>Workshops</a></li>
 													</ul>
 												</li>
 												<li class="menu-item-has-children">
-													<a href="#!">blogs</a>
-													<ul class="sub-menu">
-														<li><a href='blog.html'>blog</a></li>
-														<li><a href='blog-details.html'>blog details</a></li>
-													</ul>
+													<a href="blog.html">blogs</a>
 												</li>
 												<li>
 													<a href="gallery.html">gallery</a>
 												</li>
-												<li>
-													<a href="speaker.html">speaker</a>
-												</li>
+	
 												<li class="menu-item-has-children">
-													<a href="#!">contact</a>
-													<ul class="sub-menu">
-														<li><a href="contact.html">contact us</a></li>
-														<li><a href='404-error.html'>404 Error</a></li>
-													</ul>
+													<a href="contact.html">contact</a>
+	
 												</li>
 											</ul>
 										</div>
 									</div>
 									<!-- menu-item-list - end -->
-
+	
 									<!-- menu-item-list - start -->
 									<div class="col-lg-2">
 										<div class="user-search-btn-group ul-li clearfix">
 											<ul>
 												<li>
-													<a href="#!">
+													<a href="#login-modal" class="login-modal-btn">
 														<i class="fas fa-user"></i>
 													</a>
+													<div id="login-modal" class="reglog-modal-wrapper mfp-hide clearfix"
+														style="background-image: url(assets/images/login-modal-bg.jpg);">
+														<div class="overlay-black clearfix">
+	
+															<!-- leftside-content - start -->
+															<div class="leftside-content">
+																<div class="site-logo-wrapper mb-80">
+																	<a href="#!" class="logo">
+																		<img src="assets/images/2.site-logo.png"
+																			alt="logo_not_found">
+																	</a>
+																</div>
+																<div class="register-login-link mb-80">
+																	<ul>
+																		<li class="active"><a href="#!">Login</a></li>
+																		<li><a href="#!">Register</a></li>
+																	</ul>
+																</div>
+																<div class="copyright-text">
+																	<p class="m-0">©2019 <a href="#!"
+																			class="yellow-color">empaa.com</a> all right
+																		reserved, made with <i class="fas fa-heart"></i> by
+																		jThemes Studio </p>
+																</div>
+															</div>
+															<!-- leftside-content - end -->
+	
+															<!-- rightside-content - start -->
+															<div class="rightside-content text-center">
+	
+																<div class="mb-30">
+																	<h2 class="form-title title-large white-color">Account
+																		<strong>Login</strong>
+																	</h2>
+																	<span class="form-subtitle white-color">Login to our
+																		website, or <strong>REGISTER</strong></span>
+																</div>
+	
+																<div class="fb-login-btn mb-30">
+																	<a href="#!">
+																		<span class="icon">
+																			<i class="fab fa-facebook-f"></i>
+																		</span>
+																		login with facebook
+																	</a>
+																</div>
+	
+																<div class="or-text mb-30">
+																	<span>or sign in</span>
+																</div>
+	
+																<div class="login-form text-center mb-50">
+																	<form action="#!">
+																		<div class="form-item">
+																			<input type="email"
+																				placeholder="example@gmail.com">
+																		</div>
+																		<div class="form-item">
+																			<input type="password" placeholder="Password">
+																		</div>
+																		<button type="submit" class="login-btn">login
+																			now</button>
+																	</form>
+																</div>
+	
+																<div class="bottom-text white-color">
+																	<p class="m-0">
+																		* Denotes mandatory field.
+																	</p>
+																	<p class="m-0">** At least one telephone number is
+																		required.</p>
+																</div>
+	
+															</div>
+															<!-- rightside-content - end -->
+	
+															<a class="popup-modal-dismiss" href="#!">
+																<i class="fas fa-times"></i>
+															</a>
+	
+														</div>
+													</div>
 												</li>
 												<li>
 													<button type="button" class="toggle-overlay search-btn">
@@ -410,7 +506,8 @@
 													<div class="search-body">
 														<div class="search-form">
 															<form action="#">
-																<input class="search-input" type="search" placeholder="Search Here">
+																<input class="search-input" type="search"
+																	placeholder="Search Here">
 																<div class="outer-close toggle-overlay">
 																	<button type="button" class="search-close">
 																		<i class="fas fa-times"></i>
@@ -425,53 +522,52 @@
 										</div>
 									</div>
 									<!-- menu-item-list - end -->
-
+	
 								</div>
 							</div>
 						</div>
 						<!-- mainmenu-wrapper - end -->
-
+	
 					</div>
 				</div>
 			</div>
 			<!-- header-bottom - end -->
-
 		</header>
 		<!-- header-section - end
-		================================================== -->
+			================================================== -->
 
 
 
 
 
-		<!-- altranative-header - start
+	<!-- altranative-header - start
 		================================================== -->
 		<div class="header-altranative">
 			<div class="container">
 				<div class="logo-area float-left">
-					<a href="index-1.html">
+					<a href="index.html">
 						<img src="assets/images/1.site-logo.png" alt="logo_not_found">
 					</a>
 				</div>
-
+	
 				<button type="button" id="sidebarCollapse" class="alt-menu-btn float-right">
 					<i class="fas fa-bars"></i>
 				</button>
 			</div>
-
+	
 			<!-- sidebar menu - start -->
 			<div class="sidebar-menu-wrapper">
 				<div id="sidebar" class="sidebar">
 					<span id="sidebar-dismiss" class="sidebar-dismiss">
 						<i class="fas fa-arrow-left"></i>
 					</span>
-
+	
 					<div class="sidebar-header">
-						<a href="#!">
+						<a href="#">
 							<img src="assets/images/2.site-logo.png" alt="logo_not_found">
 						</a>
 					</div>
-
+	
 					<!-- sidebar-form - start -->
 					<div class="sidebar-form">
 						<form action="#">
@@ -480,42 +576,23 @@
 						</form>
 					</div>
 					<!-- sidebar-form - end -->
-
+	
 					<!-- main-pages-links - start -->
 					<div class="menu-link-list main-pages-links">
-						<h2 class="menu-title">all home pages</h2>
 						<ul>
-							<li>
-								<a href="index-1.html">
+							<li class="active">
+								<a href="index.html">
 									<span class="icon"><i class="fas fa-home"></i></span>
-									Home V.1
-								</a>
-							</li>
-							<li>
-								<a href="index-2.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									Home V.2
-								</a>
-							</li>
-							<li>
-								<a href="index-3.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									Home v.3
-								</a>
-							</li>
-							<li>
-								<a href="index-4.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									Home v.4
+									Home
 								</a>
 							</li>
 						</ul>
 					</div>
 					<!-- main-pages-links - end -->
-
+	
 					<!-- other-pages-links - start -->
 					<div class="menu-link-list other-pages-links">
-						<h2 class="menu-title">all single pages</h2>
+						<h2 class="menu-title">About Empaa</h2>
 						<ul>
 							<li>
 								<a href="about.html">
@@ -529,107 +606,81 @@
 									our Services
 								</a>
 							</li>
+						</ul>
+					</div>
+					<!-- other-pages-links - start -->
+					<div class="menu-link-list other-pages-links">
+						<h2 class="menu-title">Learning</h2>
+						<ul>
 							<li>
-								<a href="event-1.html">
+								<a href="#">
 									<span class="icon"><i class="fas fa-home"></i></span>
-									event list
+									Institutes
 								</a>
 							</li>
 							<li>
-								<a href="event-2.html">
+								<a href="#">
 									<span class="icon"><i class="fas fa-home"></i></span>
-									event grid
-								</a>
-							</li>
-							<li>
-								<a href="event-1-without-sidebar.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									list without sidebar
-								</a>
-							</li>
-							<li>
-								<a href="event-2-without-sidebar.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									grid without sidebar
-								</a>
-							</li>
-							<li>
-								<a href="blog.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									Latest blogs
-								</a>
-							</li>
-							<li>
-								<a href="gallery.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									our gallery
-								</a>
-							</li>
-							<li>
-								<a href="speaker.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									event speakers
-								</a>
-							</li>
-							<li>
-								<a href="contact.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									contact us
+									Workshops
 								</a>
 							</li>
 						</ul>
 					</div>
 					<!-- other-pages-links - end -->
-
-					<!-- inner-pages-links - start -->
-					<div class="menu-link-list inner-pages-links">
-						<h2 class="menu-title">all inner pages</h2>
+					<!-- other-pages-links - start -->
+					<div class="menu-link-list other-pages-links">
+						<h2 class="menu-title"></h2>
 						<ul>
 							<li>
-								<a href="booking.html">
+								<a href="event.html">
 									<span class="icon"><i class="fas fa-home"></i></span>
-									event booking
-								</a>
-							</li>
-							<li class="active">
-								<a href="event-details.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									event details
+									Events
 								</a>
 							</li>
 							<li>
-								<a href='blog-details.html'>
+								<a href="#">
 									<span class="icon"><i class="fas fa-home"></i></span>
-									blog details
+									Marketplace
 								</a>
 							</li>
 							<li>
-								<a href="faq.html">
+								<a href="blog.html">
 									<span class="icon"><i class="fas fa-home"></i></span>
-									Frequently Ask Qusetion
+									Blogs
 								</a>
 							</li>
 							<li>
-								<a href="404-error.html">
+								<a href="gallery.html">
 									<span class="icon"><i class="fas fa-home"></i></span>
-									404 error
+									Gallery
 								</a>
 							</li>
+							<li>
+								<a href="service.html">
+									<span class="icon"><i class="fas fa-home"></i></span>
+									Contact
+								</a>
+							</li>
+							
+	
 						</ul>
 					</div>
-					<!-- inner-pages-links - end -->
-
+					<!-- other-pages-links - end -->
+	
+					
+	
 					<!-- login-btn-group - start -->
 					<div class="login-btn-group">
 						<ul>
-
+	
 							<li>
 								<a href="#alt-register-modal" class="register-modal-btn">
 									Register
 								</a>
-								<div id="alt-register-modal" class="reglog-modal-wrapper register-modal mfp-hide clearfix" style="background-image: url(assets/images/login-modal-bg.jpg);">
+								<div id="alt-register-modal" class="reglog-modal-wrapper register-modal mfp-hide clearfix"
+									style="background-image: url(assets/images/login-modal-bg.jpg);">
 									<div class="overlay-black clearfix">
-
+	
 										<!-- leftside-content - start -->
 										<div class="leftside-content">
 											<div class="site-logo-wrapper mb-80">
@@ -644,19 +695,24 @@
 												</ul>
 											</div>
 											<div class="copyright-text">
-												<p class="m-0">©2018 <a href="#!" class="yellow-color">empaa.com</a> all right reserved, made with <i class="fas fa-heart"></i> by jThemes Studio </p>
+												<p class="m-0">©2019 <a href="#!" class="yellow-color">empaa.com</a> all
+													right reserved, made with <i class="fas fa-heart"></i> by jThemes Studio
+												</p>
 											</div>
 										</div>
 										<!-- leftside-content - end -->
-
+	
 										<!-- rightside-content - start -->
 										<div class="rightside-content text-center">
-
+	
 											<div class="mb-30">
-												<h2 class="form-title title-large white-color">Account <strong>Register</strong></h2>
-												<span class="form-subtitle white-color">Have an account? <strong>LOGIN NOW</strong></span>
+												<h2 class="form-title title-large white-color">Account
+													<strong>Register</strong>
+												</h2>
+												<span class="form-subtitle white-color">Have an account? <strong>LOGIN
+														NOW</strong></span>
 											</div>
-
+	
 											<div class="login-form text-center mb-50">
 												<form action="#!">
 													<div class="form-item">
@@ -681,21 +737,21 @@
 													<button type="submit" class="login-btn">login now</button>
 												</form>
 											</div>
-
+	
 											<div class="bottom-text white-color">
 												<p class="m-0">
 													* Denotes mandatory field.
 												</p>
 												<p class="m-0">** At least one telephone number is required.</p>
 											</div>
-
+	
 										</div>
 										<!-- rightside-content - end -->
-
+	
 										<a class="popup-modal-dismiss" href="#!">
 											<i class="fas fa-times"></i>
 										</a>
-
+	
 									</div>
 								</div>
 							</li>
@@ -703,9 +759,10 @@
 								<a href="#alt-login-modal" class="login-modal-btn">
 									Login
 								</a>
-								<div id="alt-login-modal" class="reglog-modal-wrapper mfp-hide clearfix" style="background-image: url(assets/images/login-modal-bg.jpg);">
+								<div id="alt-login-modal" class="reglog-modal-wrapper mfp-hide clearfix"
+									style="background-image: url(assets/images/login-modal-bg.jpg);">
 									<div class="overlay-black clearfix">
-
+	
 										<!-- leftside-content - start -->
 										<div class="leftside-content">
 											<div class="site-logo-wrapper mb-80">
@@ -720,19 +777,24 @@
 												</ul>
 											</div>
 											<div class="copyright-text">
-												<p class="m-0">©2018 <a href="#!" class="yellow-color">empaa.com</a> all right reserved, made with <i class="fas fa-heart"></i> by jThemes Studio </p>
+												<p class="m-0">©2018 <a href="#!" class="yellow-color">empaa.com</a> all
+													right reserved, made with <i class="fas fa-heart"></i> by jThemes Studio
+												</p>
 											</div>
 										</div>
 										<!-- leftside-content - end -->
-
+	
 										<!-- rightside-content - start -->
 										<div class="rightside-content text-center">
-
+	
 											<div class="mb-30">
-												<h2 class="form-title title-large white-color">Account <strong>Login</strong></h2>
-												<span class="form-subtitle white-color">Login to our website, or <strong>REGISTER</strong></span>
+												<h2 class="form-title title-large white-color">Account
+													<strong>Login</strong>
+												</h2>
+												<span class="form-subtitle white-color">Login to our website, or
+													<strong>REGISTER</strong></span>
 											</div>
-
+	
 											<div class="fb-login-btn mb-30">
 												<a href="#!">
 													<span class="icon">
@@ -741,11 +803,11 @@
 													login with facebook
 												</a>
 											</div>
-
+	
 											<div class="or-text mb-30">
 												<span>or sign in</span>
 											</div>
-
+	
 											<div class="login-form text-center mb-50">
 												<form action="#!">
 													<div class="form-item">
@@ -757,29 +819,29 @@
 													<button type="submit" class="login-btn">login now</button>
 												</form>
 											</div>
-
+	
 											<div class="bottom-text white-color">
 												<p class="m-0">
 													* Denotes mandatory field.
 												</p>
 												<p class="m-0">** At least one telephone number is required.</p>
 											</div>
-
+	
 										</div>
 										<!-- rightside-content - end -->
-
+	
 										<a class="popup-modal-dismiss" href="#!">
 											<i class="fas fa-times"></i>
 										</a>
-
+	
 									</div>
 								</div>
 							</li>
-							
+	
 						</ul>
 					</div>
 					<!-- login-btn-group - end -->
-
+	
 					<!-- social-links - start -->
 					<div class="social-links">
 						<h2 class="menu-title">get in touch</h2>
@@ -813,14 +875,14 @@
 						<a href="contact.html" class="contact-btn">contact us</a>
 					</div>
 					<!-- social-links - end -->
-
+	
 					<div class="overlay"></div>
 				</div>
 			</div>
 			<!-- sidebar menu - end -->
 		</div>
 		<!-- altranative-header - end
-		================================================== -->
+			================================================== -->
 
 
 
@@ -2080,7 +2142,7 @@
 											<span class="total-price">TOTAL PRICE :  $570.00</span>
 										</div>
 										<div class="footer-rightside-content">
-											<a href="#!" class="custom-btn">order now</a>
+											<a href="booking.html" class="custom-btn">order now</a>
 										</div>
 									</li>
 								</ul>
@@ -2698,8 +2760,7 @@
 		<!-- multy count down - jqury include -->
 		<script src="assets/js/jquery.countdown.js"></script>
 
-		<!-- color panal - jqury include -->
-		<script src="assets/js/style-switcher.js"></script>
+
 
 		<!-- custom jquery include -->
 		<script src="assets/js/custom.js"></script>
@@ -2710,5 +2771,5 @@
 
 	</body>
 
-<!-- Mirrored from jthemes.net/themes/html/harmony-event/event-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Oct 2024 07:25:12 GMT -->
+
 </html>

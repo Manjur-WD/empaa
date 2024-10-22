@@ -1555,7 +1555,7 @@ button {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   border-top: 70px solid transparent;
-  border-left: 70px solid #ffbe30;
+  border-left: 70px solid #29b65e;
   border-right: 70px solid transparent;
   border-bottom: 70px solid transparent;
 }
@@ -1712,7 +1712,7 @@ button {
   color: #ffffff;
   border-radius: 30px;
   text-transform: uppercase;
-  background-color: #ffbe30;
+  background-color: #29b65e;
 }
 
 .register-modal .leftside-content,
@@ -3196,14 +3196,14 @@ button {
 }
 
 .slide-section .main-carousel1 .item .slider-item-content .medium-text {
-  font-size: 60px;
+  font-size: clamp(25px,5vw,60px);
   font-weight: 400;
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .slide-section .main-carousel1 .item .slider-item-content .big-text {
-  font-size: 72px;
+  font-size: clamp(40px,3vw,72px);
   font-weight: 900;
   color: #ffffff;
 }
@@ -7927,10 +7927,10 @@ button {
   padding: 15px 45px;
   position: relative;
   border-radius: 30px;
-  color: #878787;
+  color: #ffffff;
   font-size: 14px;
   text-transform: uppercase;
-  background: #f7f7f7;
+  background: #ffbe30;
 }
 
 .event-section .event-list-item .event-content .tickets-details-btn:before {
@@ -11270,6 +11270,25 @@ button {
 #clients-testimonial-carousel p{
   color: white;
 }
+
+.step-1, .step-2 {
+  transition: transform 0.5s ease-in-out;
+}
+
+.form-content {
+  position: relative;
+  width: 100%;
+}
+
+.step-1.active {
+  transform: translateX(-100%);
+}
+
+.step-2.active {
+  display: block;
+  transform: translateX(0);
+}
+
 
 /* ====================================================================================================
 6 - media screen and (max-width: 320px) - end
