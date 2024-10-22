@@ -660,4 +660,12 @@
   // --------------------------------------------------
 })(jQuery);
 
+$(".guest-sign-up").click(()=>{
+  $(".popup-modal-dismiss").click();
+  $(".register-modal-btn").click();
+})
 
+$(".member-sign-up").click(()=>{
+  $(".popup-modal-dismiss").click();
+  $(".register-modal-btn").click();
+})

@@ -1312,9 +1312,9 @@ button {
   box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.1);
 }
 
-.sticky-header-section.stuck .header-bottom .menu-item-list>ul>.menu-item-has-children .sub-menu {
+/* .sticky-header-section.stuck .header-bottom .menu-item-list>ul>.menu-item-has-children .sub-menu {
   padding-top: 47px;
-}
+} */
 
 .scrolltop-fixed-header-section {
   left: 0;
@@ -8403,7 +8403,7 @@ button {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #f7f7f7;
+  background-color: white;
 }
 
 .event-details-section .event-pricing-plan .pricing-list ul .pricing-table .popularity-sign {
